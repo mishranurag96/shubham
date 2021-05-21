@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Android Calculator</title>
+
+
+
+	<script type="text/javascript">
+		
+		function display(val){
+
+			document.getElementById('result').value += val; // value = value + val
+
+		}
+
+
+		function solve(){
+			var a = document.getElementById('result').value;
+			var b = eval(a);
+
+			document.getElementById('result').value = b;
+
+
+		}
+
+		function clr(){
+			document.getElementById('result').value = " ";
+		}
+
+
+	</script>
+
+	<style type="text/css">
+
+		body{
+			text-align: center;
+		}
+		table{
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		tr{
+			height: 80px;
+		}
+		input[type = "button"]{
+			width: 100%;
+			height: 80px;
+			background-color: grey;
+			border: solid black 2px;
+		}
+		input[type = "text"]{
+			width: 98%;
+			height: 95px;
+			border: solid black 2px;
+
+		}
+		input{
+			font-size: 30px;
+		}
+		#test:hover{
+			background-color: white;
+		}
+		div{
+			font-size: 50px;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<div>Calculator</div>
+
+<table border="1">
+	<tr>
+		<td colspan="4"> <input type="text" id="result"> </td>
+		<td><input type="button" value="C" id="test" onclick="clr();"></td>
+	</tr>
+
+	<tr>
+		<td><input type="button" value="1" id="test" onclick="display('1');"></td>
+		<td><input type="button" value="2" id="test" onclick="display('2');"></td>
+		<td><input type="button" value="3" id="test" onclick="display('3');"></td>
+		<td><input type="button" value="/" id="test" onclick="display('/');"></td>
+	</tr>
+
+	<tr>
+		<td><input type="button" value="4" id="test" onclick="display('4');"></td>
+		<td><input type="button" value="5" id="test" onclick="display('5');"></td>
+		<td><input type="button" value="6" id="test" onclick="display('6');"></td>
+		<td><input type="button" value="-" id="test" onclick="display('-');"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="7" id="test" onclick="display('7');"></td>
+		<td><input type="button" value="8" id="test" onclick="display('8');"></td>
+		<td><input type="button" value="9" id="test" onclick="display('9');"></td>
+		<td><input type="button" value="+" id="test" onclick="display('+');"></td>
+	</tr>
+
+	<tr>
+		<td><input type="button" value="." id="test" onclick="display('.');"></td>
+		<td><input type="button" value="0" id="test" onclick="display('0');"></td>
+		<td><input type="button" value="=" id="test" onclick="solve()"></td>
+		<td><input type="button" value="*" id="test" onclick="display('*');"></td>
+	</tr>
+
+
+</table>
+
+</body>
+</html>
